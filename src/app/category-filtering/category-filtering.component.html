@@ -1,0 +1,28 @@
+<div class="container m-2">
+    <h3>Categories</h3>
+    <form>
+        <div class="mb-3">
+            <label for="inputKeyword" class="form-label">Filter the category</label>
+            <input type="keyword" class="form-control" id="inputKeyword" name="inputKeyword" placeholder="Keyword..." [(ngModel)]="keyword" />
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="!isEmptyData" >
+                <tr *ngFor="let item of filteredData">
+                    <td>{{ item }}</td>
+                </tr>
+            </ng-container>
+
+            <tr *ngIf="isEmptyData">
+                <td>No data found.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

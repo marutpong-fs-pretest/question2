@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CategoryFilteringComponent } from './category-filtering/category-filtering.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CategoryFilteringComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
